@@ -7,24 +7,32 @@
     <link rel ="stylesheet" href = "style.css">
   </head>
   <body>
+    <div class="site-wrapper">
     <h1> Rock Paper Scissors</h1>
 
   <div class="scoreboard">
-    <div class="label" id="user-label">User</div>
-    <div class="label" id="computer-label">Comp</div>
-    <span id="user-score">0</span>   :  <span id="computer-score">0</span>
+    <div class="scoreboard-labels">
+      <div class="label" id="user-label">User</div> 
+      <div class="label" id="computer-label">Comp</div>
+   </div>
+    <div class="scores"><span id="user-score">0</span>   :  <span id="computer-score">0</span></div>
   </div>
 
    <div class="result"> Rock Beats scissors </div>
 
    <div class="choices">
-     <div class='choice1' id="rock"> Rock </div>
-     <div class='choice2' id="paper">  Paper  </div>
-     <div class='choice3' id="scissors">  Scissors </div>
+     <div class='choice1' id="rock"> <img src="rock.png" alt="Rock"></div>
+     <div class='choice2' id="paper">  <img src="paper.png" alt="Paper">  </div>
+     <div class='choice3' id="scissors">  <img src="scissors.png" alt="Scissors"> </div>
    </div>
 
-   <footer> Made with HTML, CSS, JavaScript</footer>
+   <div class="reset">
+     <button class="reset-button">RESTART</button>
+   </div>
 
+   <!-- <footer> Made with HTML, CSS, JavaScript</footer> -->
+  
 
+  </div>
   <script type="text/javascript" src ="script.js"></script>
 </html>
