@@ -1,17 +1,18 @@
-var userScore = 0;
-var computerScore = 0;
-const updateUserScore = document.querySelector('#user-score');
-const updateComputerScore = document.querySelector('#computer-score');
-const scoreBoard = document.querySelector('.scoreboard')
-const result = document.querySelector('.result')
-const rockChoice = document.querySelector('#rock')
-const paperChoice = document.querySelector('#paper')
-const scissorsChoice = document.querySelector('#scissors')
+let userScore = 0;
+let computerScore = 0;
+let updateUserScore = document.querySelector('#user-score');
+let updateComputerScore = document.querySelector('#computer-score');
+let scoreBoard = document.querySelector('.scoreboard')
+let result = document.querySelector('.result')
+let rockChoice = document.querySelector('#rock')
+let paperChoice = document.querySelector('#paper')
+let scissorsChoice = document.querySelector('#scissors')
+let resetButton = document.querySelector('.reset-button')
 
 //getting the computer choice
 function getComputerChoice(){
-    const choices = ['rock', 'paper', 'scissors']
-    const randomNumber  = Math.floor(Math.random() * 3)
+    let choices = ['rock', 'paper', 'scissors']
+    let randomNumber  = Math.floor(Math.random() * 3)
     return choices[randomNumber]
 }
 //capitalize selections in the result display
@@ -51,10 +52,9 @@ function draw(user, computer){
     
 }
 
-
 // the code to make the game work/ deiciding if its a win, lose, draw
 function game(userChoice){
-    const computerChoice = getComputerChoice()
+    let computerChoice = getComputerChoice()
 switch (userChoice + computerChoice){
     //user wins if...
     case "rockscissors":
@@ -91,3 +91,13 @@ paperChoice.addEventListener('click', function(){
 scissorsChoice.addEventListener('click', function(){
     game('scissors')   
 });
+
+//reset button
+resetButton.addEventListener('click', reset)
+
+function reset(){
+    userScore = 0;
+    computerScore = 0;
+    updateUserScore.innerHTML = userScore
+    updateComputerScore.innerHTML = computerScore
+}
