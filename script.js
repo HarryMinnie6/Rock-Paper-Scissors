@@ -98,6 +98,7 @@ resetButton.addEventListener('click', reset)
 function reset(){
     userScore = 0;
     computerScore = 0;
+    result.innerHTML = ''
     updateUserScore.innerHTML = userScore
     updateComputerScore.innerHTML = computerScore
 }
